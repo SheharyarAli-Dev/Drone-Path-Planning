@@ -1,17 +1,17 @@
-# 🛸 Autonomous Drone Path Planner
+#  Autonomous Drone Path Planner
 
 A grid-based autonomous path planning simulator built with Python. Uses the **A\* algorithm** with Manhattan heuristic to find the optimal route for a drone navigating through obstacle-filled environments — with a clean, professional Streamlit frontend.
 
 ---
 
-## 📸 Overview
+##  Overview
 
 Application Deployed on streamlit, Visit: https://drone-path-planning.streamlit.app/
 The application generates a random grid environment with configurable obstacle density, then computes the shortest path from a user-defined start position to an end position. The result is displayed on an interactive visual map showing the path, obstacles, and key statistics.
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 project/
@@ -31,7 +31,7 @@ project/
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 ### Algorithm — A\* with Manhattan Heuristic
 
@@ -56,7 +56,7 @@ The environment is randomly generated with a configurable obstacle percentage (0
 
 ---
 
-## 🖥️ Running the Application
+##  Running the Application
 
 ### Prerequisites
 
@@ -84,7 +84,7 @@ python main.py
 
 ---
 
-## 🎛️ Configuration Options
+##  Configuration Options
 
 All parameters are set via the sidebar in the frontend (or prompted interactively in the CLI):
 
@@ -98,7 +98,7 @@ All parameters are set via the sidebar in the frontend (or prompted interactivel
 
 ---
 
-## 📊 Output
+##  Output
 
 After computing, the frontend displays:
 
@@ -109,7 +109,7 @@ After computing, the frontend displays:
 
 ---
 
-## 📁 Backend Module Reference
+##  Backend Module Reference
 
 ### `AlgorithmTraversal.py`
 Contains the core A\* implementation.
@@ -140,7 +140,7 @@ showGridWithPath(grid, path, start_x, start_y, end_x, end_y)
 
 ---
 
-## 🧩 Frontend Module Reference
+##  Frontend Module Reference
 
 | File | Responsibility |
 |------|----------------|
@@ -151,7 +151,7 @@ showGridWithPath(grid, path, start_x, start_y, end_x, end_y)
 
 ---
 
-## 📌 Notes
+##  Notes
 
 - The grid generator will retry automatically if the randomly placed obstacles block all routes between start and end.
 - Obstacle density above 60% may require many retries to find a valid environment.
@@ -159,6 +159,6 @@ showGridWithPath(grid, path, start_x, start_y, end_x, end_y)
 
 ---
 
-## 📄 License
+##  License
 
-This project is for educational and demonstration purposes.
+This project is for demonstration purposes.
