@@ -50,7 +50,6 @@ def PathFindingAlgorithmImplementation(grid, rows, cols, start_x, start_y, end_x
     current = (end_x, end_y)
 
     if current not in parent:
-        print("No path found!")
         return None, costGrid
 
     while current is not None:

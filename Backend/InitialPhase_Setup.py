@@ -1,4 +1,5 @@
 import numpy as np
+from AlgorithmTraversal import PathFindingAlgorithmImplementation
 
 class GridEnvironment:    
         
@@ -68,44 +69,28 @@ class GridEnvironment:
                                                     
         return self.rows, self.cols, self.start_x, self.start_y, self.end_x, self.end_y, self.occupied
 
-    def gridGenerationAndSetup(self,rows,cols,start_x,start_y,end_x,end_y,occupancy):
+    def generateValidEnvironment(self, rows, cols, start_x, start_y, end_x, end_y, occupancy):
         
-        grid=np.zeros((rows,cols),dtype=int)
+        attempts = 0
         
-        occupancy=occupancy/100
-        
-        randomGrid=np.random.random((rows,cols))
-        
-        mask=randomGrid<occupancy
-        grid[mask]=1
-        
-        grid[start_x,start_y]=2
-        grid[end_x,end_y]=3
-        
-        return grid
- 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-    
-        
-    
-        
-        
-    
+        while True:
+            attempts += 1
+            
+            grid = np.zeros((rows, cols), dtype=int)
+            
+            randomGrid = np.random.random((rows, cols))
+            mask = randomGrid < (occupancy / 100)
+            grid[mask] = 1
+            
+            grid[start_x, start_y] = 0
+            grid[end_x, end_y] = 0
+            
+            path, costGrid = PathFindingAlgorithmImplementation(grid, rows, cols, start_x, start_y, end_x, end_y)
+            
+            if path is not None:
+                print(f"Valid environment found in {attempts} attempt(s)!")
+                grid[start_x, start_y] = 2
+                grid[end_x, end_y] = 3
+                return grid, path, costGrid
+            
+            
