@@ -3,7 +3,11 @@
 A grid-based autonomous path planning simulator built with Python. Uses the **A\* algorithm** with Manhattan heuristic to find the optimal route for a drone navigating through obstacle-filled environments — with a clean, professional Streamlit frontend.
 
 ---
+## Preview
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/23eb9950-88aa-479d-a7d2-55c339627ce9" />
+<img width="1919" height="906" alt="image" src="https://github.com/user-attachments/assets/813d5b65-b829-4d07-ba5b-fef8f3d543d2" />
 
+---
 ##  Overview
 
 Application Deployed on streamlit, Visit: https://drone-path-planning.streamlit.app/
